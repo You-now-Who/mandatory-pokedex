@@ -1,6 +1,17 @@
 import Image from "next/image";
+import PokemonService from "../services/pokemonService";
+
+
 
 export default function Home() {
+  // you could use the service like this :)
+  
+/*     const pokemonService = new PokemonService();
+
+    pokemonService.get("pokemon", 10).then((data) => {
+      console.log(data)
+  }); */
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
