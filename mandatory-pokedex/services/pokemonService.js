@@ -1,7 +1,7 @@
 const axios = require('axios');
 import ApiUtility from '../utils/apiUtility';
 
-export default class PokemonService {
+class PokemonService {
     constructor() {
         this.apiUtility = new ApiUtility(axios);
     }
@@ -42,3 +42,5 @@ export default class PokemonService {
 
 }
 
+const pokemonService = new PokemonService();
+export default pokemonService;
