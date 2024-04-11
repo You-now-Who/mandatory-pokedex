@@ -13,7 +13,7 @@ class PokemonService {
   }
 
   getAll() {
-    return this.api.get('/pokemon')
+    return this.api.get('/pokemon?limit=100')
       .then(response => response.data.results);
   }
 }

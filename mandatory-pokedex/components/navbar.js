@@ -2,14 +2,14 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className="bg-white border-gray-200 dark:bg-indigo-900">
+    <nav className="bg-white font-mono border-gray-200 dark:bg-indigo-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/">
           <span className="flex items-center space-x-3 rtl:space-x-reverse">
             <div className="bg-white dark:bg-indigo-900 rounded-full p-1">
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/2052px-Pok%C3%A9_Ball_icon.svg.png" className="h-8" alt="Pokeball logo" />
             </div>
-            <span className="self-center text-3xl font-semibold whitespace-nowrap dark:text-red-600">Pokedex</span>
+            <span className="self-center text-3xl font-semibold font-mono whitespace-nowrap dark:text-red-600">Pokedex</span>
           </span>
         </Link>
         <div className="hidden md:block md:w-auto" id="navbar-default">

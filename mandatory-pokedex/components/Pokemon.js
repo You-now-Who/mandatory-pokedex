@@ -6,7 +6,7 @@ const Pokemon = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
   const typeColors = {
-  bug: "bg-green-500 text-white",
+  bug: "bg-green-600 text-white",
   electric: "bg-yellow-500 text-black",
   fire: "bg-red-500 text-white",
   fairy: "bg-pink-500 text-white",
@@ -54,13 +54,18 @@ const Pokemon = () => {
         <tr>
             <th className="px-4 py-2 font-bold text-xl text-shadow">Name</th>
             <th className="px-4 py-2 font-bold text-xl text-shadow">Type</th>
+            <th className="px-4 py-2 font-bold text-xl text-shadow">Height</th>
+            <th className="px-4 py-2 font-bold text-xl text-shadow">Weight</th>
             <th className="px-4 py-2 font-bold text-xl text-shadow">Ability</th>
         </tr>
         </thead>
         <tbody>
   {currentItems.map((pokemon, index) => (
     <tr key={pokemon.id} className={`text-center ${index % 2 === 0 ? 'bg-indigo-700' : 'bg-indigo-800'} hover:bg-indigo-600 transition-colors duration-200`}>
-      <td className="border px-4 py-2 font-bold text-shadow">{pokemon.name}</td>
+      <td className="border px-4 py-2 font-bold text-shadow">
+      <img src={pokemon.sprites.front_default} alt={pokemon.name} className="inline-block mr-2" />
+    {pokemon.name}
+  </td>
       <td className="border px-4 py-2 font-bold text-shadow">
         {pokemon.types.map((type, index) => (
             <span 
@@ -71,6 +76,8 @@ const Pokemon = () => {
             </span>
         ))}
         </td>
+        <td className="border px-4 py-2 font-bold text-shadow">{pokemon.height} ft</td>
+        <td className="border px-4 py-2 font-bold text-shadow">{pokemon.weight/10} kg</td>
       <td className="border px-4 py-2 font-bold text-shadow">
         {pokemon.abilities.map((ability, index) => (
           <div key={index}>{index+1}: {ability.ability.name}</div>
