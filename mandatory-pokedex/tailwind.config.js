@@ -14,5 +14,14 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    module.exports = {
+
+      plugins: [
+          require('flowbite/plugin')
+      ]
+  
+  }
+  
+  ],
 };
